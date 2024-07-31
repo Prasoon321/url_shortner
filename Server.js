@@ -3,7 +3,7 @@ dotenv.config()
 const cors = require('cors')
 const express = require('express');
 const mongoose = require("mongoose")
-const Port = 8080;
+const Port = process.env.PORT || 8080;
 const app = express();
 const corsOptions = {
     origin: "http://localhost:5173",
