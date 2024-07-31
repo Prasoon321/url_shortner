@@ -6,7 +6,7 @@ const mongoose = require("mongoose")
 const Port = process.env.PORT || 8080;
 const app = express();
 const corsOptions = {
-    origin: "http://localhost:5173",
+    origin: "https://psurlshortner.netlify.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }
@@ -14,7 +14,7 @@ app.use(cors(corsOptions))
 const urlroute = require('./Routes/Url')
 app.use(express.json())
 app.get("/", (req, res) => {
-    res.redirect("http://localhost:5173/");
+    res.redirect("https://psurlshortner.netlify.app/");
 }
 )
 
